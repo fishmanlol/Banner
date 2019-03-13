@@ -6,4 +6,8 @@
 //  Copyright © 2019 Yi Tong. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class V1: UIViewController {
+
+}
