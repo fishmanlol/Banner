@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10DB77462239C6CD00E4B2BF /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB77452239C6CD00E4B2BF /* Banner.swift */; };
 		3A4C74D6A468BC1895B06BA8 /* Pods_Banner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57457BEF1DE7ADDCD97FA65C /* Pods_Banner.framework */; };
 		8E7053562232F83500690299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7053552232F83500690299 /* AppDelegate.swift */; };
 		8E7053582232F83500690299 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7053572232F83500690299 /* ViewController.swift */; };
 		8E70535B2232F83500690299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7053592232F83500690299 /* Main.storyboard */; };
 		8E70535D2232F83600690299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E70535C2232F83600690299 /* Assets.xcassets */; };
 		8E7053602232F83600690299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E70535E2232F83600690299 /* LaunchScreen.storyboard */; };
-		8E7053682232FADA00690299 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7053672232FADA00690299 /* Banner.swift */; };
 		8E70536A2233409400690299 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7053692233409400690299 /* TabController.swift */; };
 		8E70536C22334BE100690299 /* V1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70536B22334BE100690299 /* V1.swift */; };
 		8E70536E22334BE700690299 /* V2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70536D22334BE700690299 /* V2.swift */; };
@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10DB77452239C6CD00E4B2BF /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		57457BEF1DE7ADDCD97FA65C /* Pods_Banner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Banner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78450815D23CBAC6D14987F9 /* Pods-Banner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Banner/Pods-Banner.release.xcconfig"; sourceTree = "<group>"; };
 		8E7053522232F83500690299 /* Banner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,7 +31,7 @@
 		8E70535C2232F83600690299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E70535F2232F83600690299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E7053612232F83600690299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E7053672232FADA00690299 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		8E7053672232FADA00690299 /* Banner-old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Banner-old.swift"; sourceTree = "<group>"; };
 		8E7053692233409400690299 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		8E70536B22334BE100690299 /* V1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1.swift; sourceTree = "<group>"; };
 		8E70536D22334BE700690299 /* V2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2.swift; sourceTree = "<group>"; };
@@ -93,7 +94,8 @@
 				8E7053692233409400690299 /* TabController.swift */,
 				8E70536B22334BE100690299 /* V1.swift */,
 				8E70536D22334BE700690299 /* V2.swift */,
-				8E7053672232FADA00690299 /* Banner.swift */,
+				8E7053672232FADA00690299 /* Banner-old.swift */,
+				10DB77452239C6CD00E4B2BF /* Banner.swift */,
 				8E979E55223826D9003A5D3C /* BannerViewController.swift */,
 				8E7053592232F83500690299 /* Main.storyboard */,
 				8E70535C2232F83600690299 /* Assets.xcassets */,
@@ -115,6 +117,7 @@
 				8E70534F2232F83500690299 /* Frameworks */,
 				8E7053502232F83500690299 /* Resources */,
 				B9E324761C36C63549C0C6EB /* [CP] Embed Pods Frameworks */,
+				92827656E233CE6422181668 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +197,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		92827656E233CE6422181668 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Banner/Pods-Banner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B9E324761C36C63549C0C6EB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,14 +225,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Banner/Pods-Banner-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bartinter/Bartinter.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bartinter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,7 +249,7 @@
 				8E70536A2233409400690299 /* TabController.swift in Sources */,
 				8E7053562232F83500690299 /* AppDelegate.swift in Sources */,
 				8E70536C22334BE100690299 /* V1.swift in Sources */,
-				8E7053682232FADA00690299 /* Banner.swift in Sources */,
+				10DB77462239C6CD00E4B2BF /* Banner.swift in Sources */,
 				8E70536E22334BE700690299 /* V2.swift in Sources */,
 				8E979E56223826D9003A5D3C /* BannerViewController.swift in Sources */,
 			);
